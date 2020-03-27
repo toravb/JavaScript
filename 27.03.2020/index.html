@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        function reverseStr(str) {
+            return str.split("").reverse().join("");
+        }
+
+        function txt() {
+            event.preventDefault();
+            let text = document.getElementById("txt1").value;
+            document.getElementById('txt').innerHTML = reverseStr(text);
+        };
+
+    </script>
+</head>
+
+<body>
+<form onsubmit="txt()">
+    <p id="txt"></p>
+    <input type="text" id="txt1" placeholder="Text 1">
+    <input type="submit" value="Отправить">
+</form>
+</body>
+</html>
